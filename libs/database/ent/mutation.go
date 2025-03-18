@@ -479,7 +479,7 @@ func (m *AccountMutation) RemoveBlockIDs(ids ...uuid.UUID) {
 	}
 }
 
-// RemovedBlocks returns the removed IDs of the "blocks" edge to the Block entity.
+// RemovedBlocksIDs returns the removed IDs of the "blocks" edge to the Block entity.
 func (m *AccountMutation) RemovedBlocksIDs() (ids []uuid.UUID) {
 	for id := range m.removedblocks {
 		ids = append(ids, id)
@@ -1866,7 +1866,7 @@ func (m *WalletMutation) RemoveAccountIDs(ids ...uuid.UUID) {
 	}
 }
 
-// RemovedAccounts returns the removed IDs of the "accounts" edge to the Account entity.
+// RemovedAccountsIDs returns the removed IDs of the "accounts" edge to the Account entity.
 func (m *WalletMutation) RemovedAccountsIDs() (ids []uuid.UUID) {
 	for id := range m.removedaccounts {
 		ids = append(ids, id)
